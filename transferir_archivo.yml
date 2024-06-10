@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: Copy utp-file-2 using command module
-      ansible.builtin.command: "scp -i ~/.ssh/know_hosts ~/utp/utp-file-2 ec2-user@node1:/home/ec2-user/backup/"
+      ansible.builtin.command: "scp -i ~/.ssh/id_rsa ~/utp/utp-file-2 ec2-user@node1:/home/ec2-user/backup/"
