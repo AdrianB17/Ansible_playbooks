@@ -14,8 +14,6 @@
         location: "us-east-2"
         resource_group: "devops_lab"
         vm_size: "Standard_D2s_v3"
-        network_interfaces:  # New parameter
-          - "demo"  # Replace "demo" with your network interface name
         admin_username: "admin"
         admin_password: "Contraseña_muy_segura$"
         custom_data: "#!/bin/bash\necho '¡VM creada exitosamente!' > /etc/motd"  # New parameter
