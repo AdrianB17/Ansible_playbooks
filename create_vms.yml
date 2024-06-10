@@ -6,12 +6,7 @@
     resource_group: "devops_lab"  # Reemplace con su nombre de grupo de recursos
     vm_name: "my-vm"  # Reemplace con el nombre de su máquina virtual
     admin_username: "admin"
-    admin_password: "Contraseña_muy_segura$"  # ¡Cambie esta contraseña!
-    image:
-      offer: "CentOS"
-      publisher: "OpenLogic"
-      sku: "7.1"
-      version: "latest"
+    admin_password: "Contraseña_muy_segura$" 
   tasks:
     - name: Crear una máquina virtual
       azure_rm_virtualmachine:
@@ -19,13 +14,13 @@
         location: "us-east-2"
         resource_group: "devops_lab"
         vm_size: "Standard_D2s_v3"
-        network_interface_names:  # New parameter
+        network_interfaces:  # New parameter
           - "demo"  # Replace "demo" with your network interface name
         admin_username: "admin"
         admin_password: "Contraseña_muy_segura$"
         custom_data: "#!/bin/bash\necho '¡VM creada exitosamente!' > /etc/motd"  # New parameter
-        image:  # Existing parameter
-          offer: "CentOS"
-          publisher: "OpenLogic"
-          sku: "7.1"
-          version: "latest"
+        image:
+          offer: UbuntuServer
+          publisher: Canonical
+          sku: 16.04-LTS
+          version: latest
