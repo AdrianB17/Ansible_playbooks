@@ -5,13 +5,12 @@
   tasks:
     - name: Crear una máquina virtual
       azure_rm_virtualmachine:
-        name: "my-vm"
+        name: my-vm
         location: eastus2
-        resource_group: "devops_lab"
-        vm_size: "Standard_D2s_v3"
-        admin_username: "admin"
-        admin_password: "Contraseña_muy_segura$"
-        custom_data: "#!/bin/bash\necho '¡VM creada exitosamente!' > /etc/motd"  # New parameter
+        resource_group: devops_lab
+        vm_size: Standard_D2s_v3
+        admin_username: admin
+        admin_password: Contraseña_muy_segura$
         image:
           offer: UbuntuServer
           publisher: Canonical
