@@ -1,7 +1,7 @@
 ---
-- name: Copy utp-file-2 to node2 using command module
+- name: Copy file to node1 using command module
   hosts: localhost
   become: true
   tasks:
-    - name: Copy utp-file-2 using command module
-      ansible.builtin.shell: "scp -i ~/.ssh/id_rsa ~/utp/utp-file ec2-user@node1:/home/ec2-user/"
+    - name: Copy file using shell module
+      ansible.builtin.shell: "scp -i ~/.ssh/id_rsa ~/utp/utp.txt ec2-user@node1:/home/ec2-user/"
