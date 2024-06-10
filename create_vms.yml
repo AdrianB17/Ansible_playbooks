@@ -11,7 +11,7 @@
     - name: Crear una máquina virtual
       azure_rm_virtualmachine:
         name: "my-vm"
-        location: "us-east-2"
+        location: eastus2
         resource_group: "devops_lab"
         vm_size: "Standard_D2s_v3"
         admin_username: "admin"
