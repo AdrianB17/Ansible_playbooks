@@ -2,11 +2,6 @@
 - name: Create VM with defaults
   hosts: localhost
   become: true
-  vars:
-    resource_group: "devops_lab"  # Reemplace con su nombre de grupo de recursos
-    vm_name: "my-vm"  # Reemplace con el nombre de su máquina virtual
-    admin_username: "admin"
-    admin_password: "Contraseña_muy_segura$" 
   tasks:
     - name: Crear una máquina virtual
       azure_rm_virtualmachine:
