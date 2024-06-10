@@ -3,13 +3,13 @@
   hosts: localhost
   become: true
   tasks:
-    azure_rm_virtualmachine:
-      resource_group: devops_lab
-      name: testvm10
-      admin_username: "admin"
-      admin_password: "Contraseña_muy_segura$"
-      image:
-        offer: CentOS
-        publisher: OpenLogic
-        sku: '7.1'
-        version: latest
+    - azure_rm_virtualmachine:
+        resource_group: devops_lab
+        name: testvm10
+        admin_username: "admin"
+        admin_password: "Contraseña_muy_segura$"
+        image:
+          offer: CentOS
+          publisher: OpenLogic
+          sku: '7.1'
+          version: latest
