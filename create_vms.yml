@@ -2,14 +2,28 @@
 - name: Create VM with defaults
   hosts: localhost
   become: true
+  vars:
+    resource_group: "devops_lab"  # Reemplace con su nombre de grupo de recursos
+    vm_name: "my-vm"  # Reemplace con el nombre de su máquina virtual
+    admin_username: "admin"
+    admin_password: "Contraseña_muy_segura$"  # ¡Cambie esta contraseña!
+    image:
+      offer: "CentOS"
+      publisher: "OpenLogic"
+      sku: "7.1"
+      version: "latest"
   tasks:
-    - azure_rm_virtualmachine:
-        resource_group: devops_lab
-        name: testvm10
-        admin_username: "admin"
-        admin_password: "Contraseña_muy_segura$"
-        image:
-          offer: CentOS
-          publisher: OpenLogic
-          sku: '7.1'
-          version: latest
+    - name: Crear una maquina virtual
+      azure_rm_virtualmachine:
+        name: "{{ vm_name }}"
+        location: "us-east-2"
+        resource_group: "{{ resource_group }}"
+        vm_size: "Standard_D2s_v3"
+        network_interface_id: "/subscriptions/e9bce356-7dbb-457b-adc0-b8c0c307b1e4/resourceGroups/{{ resource_group }}/providers/Microsoft.Network/networkInterfaces/demo"
+        os_profile:
+          computer_name: "{{ vm_name }}"
+          admin_username: "{{ admin_username }}"
+          admin_password: "{{ admin_password }}"
+          customization_script: "#!/bin/bash\necho '¡VM creada exitosamente!' > /etc/motd"
+        storage_profile:
+          image: "{{ image }}"
