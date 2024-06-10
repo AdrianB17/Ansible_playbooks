@@ -9,7 +9,7 @@
         location: eastus2
         resource_group: devops_lab
         vm_size: Standard_D2s_v3
-        admin_username: admin
+        admin_username: administrador
         admin_password: Contraseña_muy_segura$
         image:
           offer: UbuntuServer
