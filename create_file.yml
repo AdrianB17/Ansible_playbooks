@@ -1,0 +1,11 @@
+---
+- name: Crear archivo en /tmp
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Crear archivo "archivo_creado.txt"
+      ansible.builtin.file:
+        path: /tmp/archivo_creado.txt
+        state: touch
+        mode: '0644'
+        content: "Este archivo fue creado por un playbook de Ansible."
