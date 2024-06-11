@@ -6,10 +6,10 @@
       azure_rm_storageaccount_info:
         resource_group: devops_lab
 
-#    - name: Download the file
-#      azure_rm_storageblob:
-#        resource_group: devops_lab
-#        storage_account_name: devopsstorage17
-#        container: images-redhat
-#        blob: descarga.png
-#        dest: /tmp/descarga.png
+    - name: Download the file
+      azure_rm_storageblob:
+        resource_group: devops_lab
+        storage_account_name: devopsstorage17
+        container: images-redhat
+        blob: descarga.png
+        dest: /tmp/descarga.png
