@@ -1,6 +1,6 @@
 ---
 - name: Download the file from storageblob
-  hosts: localhost
+  hosts: ansible-1
   vars:
     ansible_python_interpreter: "/usr/bin/python3"
   tasks:
