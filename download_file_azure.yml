@@ -1,6 +1,6 @@
 ---
 - name: Download the file from storageblob
-  hosts: localhost
+  hosts: node1
   tasks:
     - name: Get facts for all accounts in a resource group
       azure_rm_storageaccount_info:
