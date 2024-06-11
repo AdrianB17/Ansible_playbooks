@@ -1,13 +1,15 @@
 ---
 - name: Download the file from storageblob
   hosts: ansible-1
-  vars:
-    ansible_python_interpreter: /usr/bin/python3
   tasks:
-    - name: Download the file
-      azure_rm_storageblob:
-        resource_group: devops_lab
-        storage_account_name: devopsstorage17
-        container: images-redhat
-        blob: descarga.png
-        dest: /tmp/descarga.png
+    - name: Info of storageaccount
+      azure_rm_storageaccount_info:
+      resource_group: devops_lab
+
+#    - name: Download the file
+#      azure_rm_storageblob:
+#        resource_group: devops_lab
+#        storage_account_name: devopsstorage17
+#        container: images-redhat
+#        blob: descarga.png
+#        dest: /tmp/descarga.png
