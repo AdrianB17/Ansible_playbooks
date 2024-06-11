@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: Copy file using shell module
-      ansible.builtin.shell: "scp -i ~/.ssh/id_rsa ~/utp/utp.txt root@10.128.0.21:/home/root"
+      ansible.builtin.shell: "scp -i ~/.ssh/authorized_keys /home/student/file ec2-user@node1:/home/ec2-user/"
