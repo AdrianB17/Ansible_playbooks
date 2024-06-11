@@ -1,6 +1,6 @@
 ---
 - name: Download the file from storageblob
-  hosts: localhost
+  hosts: dev
   become: true
   tasks:
     - name: Download the file
