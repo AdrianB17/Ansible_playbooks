@@ -1,6 +1,6 @@
 ---
 - name: Download the file from storageblob
-  hosts: ansible-1
+  hosts: web
   tasks:
     - name: Download the file
       azure_rm_storageblob:
