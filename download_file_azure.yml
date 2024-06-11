@@ -1,6 +1,6 @@
 ---
 - name: Download the file from storageblob
-  hosts: localhost
+  hosts: node1
   become: true
   tasks:
     - name: Download the file
@@ -9,4 +9,4 @@
         storage_account_name: devopsstorage17
         container: images-redhat
         blob: descarga.png
-        dest: /home/student/descarga.png
+        dest: /tmp/descarga.png
