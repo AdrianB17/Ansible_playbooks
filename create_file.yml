@@ -8,4 +8,3 @@
         path: /tmp/archivo_creado.txt
         state: touch
         mode: '0644'
-        content: "Este archivo fue creado por un playbook de Ansible."
