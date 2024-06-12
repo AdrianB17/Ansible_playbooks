@@ -4,7 +4,7 @@
   become: true
   tasks:
     - name: Crear archivo "archivo_creado.txt"
-      file:
+      ansible.builtin.file:
         path: /tmp/archivo_creado.txt
         state: touch
         mode: '0644'
