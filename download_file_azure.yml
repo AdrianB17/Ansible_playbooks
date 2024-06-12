@@ -1,6 +1,6 @@
 ---
 - name: Download the file from storageblob
-  hosts: node1
+  hosts: ansible-1
   tasks:
     - name: Get facts for all accounts in a resource group
       azure_rm_storageaccount_info:
@@ -12,4 +12,4 @@
         storage_account_name: devopsstorage17
         container: images-redhat
         blob: descarga.png
-        dest: /home/ec2-user/
+        dest: /tmp/
