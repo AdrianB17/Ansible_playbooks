@@ -1,6 +1,6 @@
 ---
 - name: Crear archivo en /tmp
-  hosts: localhost
+  hosts: rhel8
   become: true
   tasks:
     - name: Crear archivo "archivo_creado.txt"
