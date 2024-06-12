@@ -1,6 +1,6 @@
 ---
 - name: Copy file to node1 using command module
-  hosts: localhost
+  hosts: ansible-1
   become: true
   tasks:
     - name: Copy file using shell module
