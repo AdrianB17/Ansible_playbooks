@@ -1,0 +1,4 @@
+- name: Remove file logs
+  ansible.builtin.file:
+    path: /varr/log/dnf.log
+    state: absent
