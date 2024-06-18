@@ -1,4 +1,8 @@
-- name: Remove file logs
-  ansible.builtin.file:
-    path: /varr/log/dnf.log
-    state: absent
+---
+- name: Apache server installed
+  hosts: node3
+  tasks:
+  - name: Remove file logs
+    ansible.builtin.file:
+      path: /varr/log/dnf.log
+      state: absent
