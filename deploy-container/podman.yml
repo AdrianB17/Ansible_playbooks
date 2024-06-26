@@ -21,3 +21,5 @@
         - 80
       ports:
         - 8080:80
+
+  # execution environment -> quay.io/rh_ee_tpaul/custom-tpaul/webserver-deploy-image:latest
